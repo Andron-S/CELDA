@@ -19,17 +19,32 @@
 
     <TextView
         android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="113dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="113dp"
         android:fontFamily="@font/clearsansmedium"
         android:foregroundTint="@color/black"
         android:text="@string/logo"
         android:textColor="#292929"
         android:textSize="61sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="206dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="103dp"
+        android:background="@drawable/line_in_launchscreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
