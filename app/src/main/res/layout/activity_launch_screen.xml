@@ -8,7 +8,7 @@
     android:background="@color/background">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="229dp"
         android:layout_height="229dp"
         android:layout_marginStart="91dp"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/anim_logo" />
 
     <TextView
         android:id="@+id/Logo"
@@ -34,7 +34,7 @@
         android:textSize="61sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="206dp"
