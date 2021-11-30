@@ -10,5 +10,7 @@
     <color name="background">#FFFFFFFF</color>
     <color name="main_color">#292929</color>
     <color name="grey">#979797</color>
+    <color name="greyE2">#E2E2E2</color>
     <color name="progress_bar_color">#FFEF68</color>
+    <color name="newcolor">#00FFFFFF</color>
 </resources>
