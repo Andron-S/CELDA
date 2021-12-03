@@ -54,10 +54,6 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     override fun getGroupView(p0: Int, p1: Boolean, p2: View?, p3: ViewGroup?): View {
         val headerTittle : String = getGroup(p0).toString()
         val v : View? = LayoutInflater.from(p3?.context).inflate(R.layout.module_group, null)
-//        if (p2 == null) {
-//            val inflater : LayoutInflater = _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//            v = inflater.inflate(R.layout.module_group, null)
-//        }
 
         val moduleTittle : TextView = v!!.findViewById(R.id.moduleTittle)
         moduleTittle.text = headerTittle
@@ -68,11 +64,6 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     override fun getChildView(p0: Int, p1: Int, p2: Boolean, convertView: View?, p4: ViewGroup?): View {
         val childText : String = getChild(p0,p1).toString()
         val v : View? = LayoutInflater.from(p4?.context).inflate(R.layout.item_module_lesson, null)
-//        if(convertView == null) {
-////            LayoutInflater.from(p4?.context).inflate(R.layout.item_module_lesson, null)
-//            val inflater : LayoutInflater = _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//            v = inflater.inflate(R.layout.module_group, null)
-//        }
 
         val lessonTitle : TextView = v!!.findViewById(R.id.lessonTitle)
         lessonTitle.text = childText
