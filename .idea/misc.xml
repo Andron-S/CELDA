@@ -3,28 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/course_shadow.xml" value="0.14444444444444443" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/line.xml" value="0.14444444444444443" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/line_group_module.xml" value="0.14444444444444443" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/line_in_launchscreen.xml" value="0.21927083333333333" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/line_lesson.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/okkkkkkkkkkkkkkkkkkkkkkk.xml" value="0.14618055555555556" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/drawable/shadow_header.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/activity_launch_screen.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/activity_main.xml" value="0.13368055555555555" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/item_module_lesson.xml" value="0.25" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/listitem_course.xml" value="0.33" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/listitem_module.xml" value="0.23958333333333334" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/main_screen.xml" value="0.18526315789473685" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/module_group.xml" value="0.16" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/module_screen.xml" value="0.23958333333333334" />
-        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/selected_course_layout.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/listitem_course.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/CELDA/app/src/main/res/layout/main_screen.xml" value="0.33" />
         <entry key="..\:/Users/Andrey/AndroidStudioProjects/CELDA/app/src/main/res/layout/activity_launch_screen.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/Andrey/AndroidStudioProjects/CELDA/app/src/main/res/layout/activity_main.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/CELDA/app/src/main/res/layout/listitem_course.xml" value="0.5" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/CELDA/app/src/main/res/layout/module_group.xml" value="0.18194444444444444" />
+        <entry key="..\:/Users/Andrey/AndroidStudioProjects/CELDA/app/src/main/res/layout/selected_course_layout.xml" value="0.18194444444444444" />
+        <entry key="..\:/Users/Peter/Desktop/CELDA/app/src/main/res/layout/module_screen.xml" value="0.2907608695652174" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

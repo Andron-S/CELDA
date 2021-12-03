@@ -5,6 +5,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.app.celda.R
@@ -14,13 +16,13 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     private lateinit var _context : Context
     private lateinit var _listDataHeader : List<String>
     private lateinit var _listDataChild : HashMap<String, List<String>>
+    private lateinit var anime : Animation
 
     constructor(context : Context, listDataHeader : List<String>, listChildData : HashMap<String, List<String>>) : this() {
         _context = context
         _listDataChild = listChildData
         _listDataHeader = listDataHeader
     }
-
 
     override fun getGroupCount(): Int {
         return _listDataHeader.size
@@ -64,6 +66,10 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     override fun getChildView(p0: Int, p1: Int, p2: Boolean, convertView: View?, p4: ViewGroup?): View {
         val childText : String = getChild(p0,p1).toString()
         val v : View? = LayoutInflater.from(p4?.context).inflate(R.layout.item_module_lesson, null)
+
+
+        anime = AnimationUtils.loadAnimation(p4?.context, R.anim.test)
+        v?.startAnimation(anime)
 
         val lessonTitle : TextView = v!!.findViewById(R.id.lessonTitle)
         lessonTitle.text = childText

@@ -2,9 +2,13 @@ package com.app.celda.Activities
 
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ExpandableListView
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.children
 import com.app.celda.Adapter.ExpandableListAdapter
 import com.app.celda.R
 import kotlinx.android.synthetic.main.selected_course_layout.*
@@ -13,6 +17,7 @@ class SelectedCourseScreen : AppCompatActivity() {
 
     lateinit var listDataChild : HashMap<String, List<String>>
     lateinit var listDataHeader : List<String>
+    lateinit var anime : Animation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +40,7 @@ class SelectedCourseScreen : AppCompatActivity() {
 
         lvExpnd.setOnGroupExpandListener(object : ExpandableListView.OnGroupExpandListener {
             override fun onGroupExpand(p0: Int) {
-                Toast.makeText(applicationContext, listDataHeader[p0] + " Expanded", Toast.LENGTH_SHORT).show()
+
             }
         })
 
@@ -54,9 +59,9 @@ class SelectedCourseScreen : AppCompatActivity() {
                 p3: Int,
                 p4: Long
             ): Boolean {
-                Toast.makeText(applicationContext, listDataHeader[p2] + " " + listDataChild[listDataHeader[p2]]?.get(p3), Toast.LENGTH_SHORT).show()
                 return false
             }
+
 
         })
 
