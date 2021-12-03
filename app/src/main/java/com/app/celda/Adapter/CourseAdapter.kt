@@ -9,18 +9,24 @@ import com.app.celda.Model.Course
 import com.app.celda.R
 import kotlinx.android.synthetic.main.listitem_course.view.*
 
-class CourseAdapter : RecyclerView.Adapter<CourseAdapter.MyViewHolder>() {
+class CourseAdapter(private val listener : Listener) : RecyclerView.Adapter<CourseAdapter.MyViewHolder>() {
 
     private val list = mutableListOf<Course>()
+
+    interface Listener {
+        fun onItemClick()
+    }
 
     inner class MyViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.listitem_course, parent, false)
     ) {
       fun bind(course : Course) = with(itemView) {
           imgPreview.setImageBitmap(course.img)
-          nameCourse.setText(course.name)
-          descriptionCourse.setText(course.description)
-          authorCourse.setText(course.author)
+          nameCourse.text = course.name
+          descriptionCourse.text = course.description
+          authorCourse.text = course.author
+
+          setOnClickListener { listener.onItemClick() }
       }
     }
 
@@ -35,7 +41,7 @@ class CourseAdapter : RecyclerView.Adapter<CourseAdapter.MyViewHolder>() {
     fun addItem(course: Course) {
         list.add(course)
         notifyItemInserted(list.lastIndex)
-        Log.i("AUF:", "${list.size}")
+//        Log.i("AUF:", "${list.size}")
     }
 
 }

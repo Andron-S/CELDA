@@ -1,4 +1,4 @@
-package com.app.celda
+package com.app.celda.Activities
 
 import android.content.Intent
 import android.graphics.drawable.Animatable
@@ -8,15 +8,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
+import com.app.celda.R
 
 class LaunchScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch_screen)
-        val progressBar : ProgressBar = findViewById(R.id.progressBar)
         val mCpuImageView: ImageView = findViewById<View>(R.id.logo) as ImageView
-        val drawable: Drawable = mCpuImageView.getDrawable()
+        val drawable: Drawable = mCpuImageView.drawable
         if (drawable is Animatable) {
             (drawable as Animatable).start()
         }
