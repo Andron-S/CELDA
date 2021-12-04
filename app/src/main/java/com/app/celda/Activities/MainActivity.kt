@@ -8,13 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.celda.Adapter.CourseAdapter
 import com.app.celda.Json.ImageJSONReader
 import com.app.celda.R
+import com.app.celda.database.DBCelda
 import kotlinx.android.synthetic.main.main_screen.*
 
 class MainActivity : AppCompatActivity(), CourseAdapter.Listener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_screen)
-
+        val db = DBCelda(this)
+        db.openDB()
         initialization()
     }
 
