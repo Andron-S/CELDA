@@ -14,4 +14,5 @@
     <color name="progress_bar_color">#FFEF68</color>
     <color name="newcolor">#00FFFFFF</color>
     <color name="Blue">#3A64A3</color>
+    <color name="blueLongClick">#0A05FF</color>
 </resources>

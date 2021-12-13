@@ -1,6 +1,8 @@
 package com.app.celda.Activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -9,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
+import com.app.celda.Adapter.CourseAdapter
 import com.app.celda.Adapter.ExpandableListAdapter
 import com.app.celda.R
 import kotlinx.android.synthetic.main.selected_course_layout.*
@@ -23,6 +26,8 @@ class SelectedCourseScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.selected_course_layout)
 
+        val module = intent.getStringExtra("movie")
+        Log.i("EXPANDABLE:","$module")
         prepareListData()
 
         lvExpnd.setAdapter(ExpandableListAdapter(this,listDataHeader, listDataChild))
@@ -77,6 +82,10 @@ class SelectedCourseScreen : AppCompatActivity() {
         val cuteInf : ArrayList<String> = ArrayList<String>()
         cuteInf.add("Real")
         cuteInf.add("Po factu")
+        cuteInf.add("Real")
+        cuteInf.add("Po factu")
+        cuteInf.add("Real")
+        cuteInf.add("Po factu")
 
         val gusevKrut : ArrayList<String> = ArrayList<String>()
         gusevKrut.add("Tupoy")
@@ -86,4 +95,9 @@ class SelectedCourseScreen : AppCompatActivity() {
         listDataChild[listDataHeader[1]] = gusevKrut
 
     }
+
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//
+//    }
 }

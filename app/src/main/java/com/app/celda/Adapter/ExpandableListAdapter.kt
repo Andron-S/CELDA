@@ -17,6 +17,7 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     private lateinit var _listDataHeader : List<String>
     private lateinit var _listDataChild : HashMap<String, List<String>>
     private lateinit var anime : Animation
+    private lateinit var trueOrFalseAnime : HashMap<Long, Boolean>
 
     constructor(context : Context, listDataHeader : List<String>, listChildData : HashMap<String, List<String>>) : this() {
         _context = context
@@ -44,8 +45,8 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
         return p0.toLong()
     }
 
-    override fun getChildId(p0: Int, p1: Int): Long {
-        return p1.toLong()
+    override fun getChildId(groupPosition: Int, childPosition: Int): Long {
+        return childPosition.toLong()
     }
 
     override fun hasStableIds(): Boolean {
@@ -53,9 +54,14 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     }
 
     @SuppressLint("InflateParams")
-    override fun getGroupView(p0: Int, p1: Boolean, p2: View?, p3: ViewGroup?): View {
-        val headerTittle : String = getGroup(p0).toString()
-        val v : View? = LayoutInflater.from(p3?.context).inflate(R.layout.module_group, null)
+    override fun getGroupView(groupPosition: Int, isExpanded: Boolean, convertView: View?, parent: ViewGroup?): View {
+        val headerTittle : String = getGroup(groupPosition).toString()
+        val v : View? = LayoutInflater.from(parent?.context).inflate(R.layout.module_group, null)
+
+//
+//        for (i in _listDataChild[_listDataHeader[groupPosition]]!![0].length until _listDataChild[_listDataHeader[groupPosition]]!![0].length) {
+//            trueOrFalseAnime.put(getChildId(groupPosition, i), false)
+//        }
 
         val moduleTittle : TextView = v!!.findViewById(R.id.moduleTittle)
         moduleTittle.text = headerTittle
@@ -63,12 +69,18 @@ class ExpandableListAdapter() : BaseExpandableListAdapter() {
     }
 
     @SuppressLint("InflateParams")
-    override fun getChildView(p0: Int, p1: Int, p2: Boolean, convertView: View?, p4: ViewGroup?): View {
-        val childText : String = getChild(p0,p1).toString()
-        val v : View? = LayoutInflater.from(p4?.context).inflate(R.layout.item_module_lesson, null)
+    override fun getChildView(groupPosition: Int, childPosition: Int, isLastChild: Boolean, convertView: View?, parent: ViewGroup?): View {
 
+        val childText : String = getChild(groupPosition,childPosition).toString()
+        val v : View? = LayoutInflater.from(parent?.context).inflate(R.layout.item_module_lesson, null)
 
-        anime = AnimationUtils.loadAnimation(p4?.context, R.anim.test)
+//        if (trueOrFalseAnime.containsKey(getChildId(groupPosition,childPosition))) {
+//            if (trueOrFalseAnime[getChildId(groupPosition,childPosition)] == false) {
+//                anime = AnimationUtils.loadAnimation(parent?.context, R.anim.test)
+//                v?.startAnimation(anime)
+//            }
+//        }
+        anime = AnimationUtils.loadAnimation(parent?.context, R.anim.test)
         v?.startAnimation(anime)
 
         val lessonTitle : TextView = v!!.findViewById(R.id.lessonTitle)

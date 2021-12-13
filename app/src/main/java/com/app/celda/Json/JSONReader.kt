@@ -4,10 +4,12 @@ import org.json.JSONObject
 
 interface JSONReader<T> {
 
-    fun download(): String?
+    fun download() : String?
 
-    fun parse(data: String?): MutableList<T>
+    fun parse(data: String?) : MutableList<T>
 
-    fun parseObject(jsonObject: JSONObject): T?
+    fun parse2(data: String?) : MutableList<MutableList<T>>
+
+    fun parseObject(jsonObject: JSONObject) : T?
 
 }

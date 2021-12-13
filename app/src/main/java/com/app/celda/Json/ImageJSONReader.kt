@@ -1,5 +1,6 @@
 package com.app.celda.Json
 
+import android.util.Log
 import com.app.celda.Model.Course
 import org.json.JSONObject
 
@@ -20,6 +21,7 @@ class ImageJSONReader : JSONReader<Course> {
         if (data?.isNotEmpty() == true) {
             val json = JSONObject(data)
             val jsonArray = json.getJSONArray(TAG)
+//            Log.i("AUF:","$jsonArray")
             for (i in 0 until jsonArray.length()) {
                 parseObject(jsonArray.getJSONObject(i))?.let {
                     courseList.add(it)
@@ -37,6 +39,10 @@ class ImageJSONReader : JSONReader<Course> {
             jsonObject.getString("description"),
             jsonObject.getString("author")
         )
+    }
+
+    override fun parse2(data: String?): MutableList<MutableList<Course>> {
+        TODO("Not yet implemented")
     }
 
 
