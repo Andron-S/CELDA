@@ -46,7 +46,6 @@ class SelectedCourseScreen : AppCompatActivity() {
 
         lvExpnd.setOnGroupCollapseListener(object : ExpandableListView.OnGroupCollapseListener {
             override fun onGroupCollapse(p0: Int) {
-                Toast.makeText(applicationContext, listDataHeader[p0] + " Collapsed", Toast.LENGTH_SHORT).show()
             }
 
         })
