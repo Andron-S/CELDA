@@ -57,5 +57,3 @@ class MainActivity : AppCompatActivity(), CourseAdapter.Listener {
         moveTaskToBack(true)
     }
 }
-
-// Показать видос "ИСПАНЦЫ"
