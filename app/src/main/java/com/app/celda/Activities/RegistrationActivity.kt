@@ -20,6 +20,8 @@ class RegistrationActivity : AppCompatActivity() {
         btnReg.setOnClickListener {
             if (getFromEditText()) {
                 //Запись в бд
+                val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
+                startActivity(intent)
             }
         }
     }

@@ -21,7 +21,7 @@ class LaunchScreen : AppCompatActivity() {
         }
 
         Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }, 3900)
     }

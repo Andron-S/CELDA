@@ -17,6 +17,8 @@ class LoginActivity : AppCompatActivity()
         val btnLogin : Button = findViewById(R.id.btnLogin)
         btnLogin.setOnClickListener {
             getFromEditText()
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
