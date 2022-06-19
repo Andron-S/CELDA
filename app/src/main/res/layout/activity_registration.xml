@@ -13,6 +13,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/style_textedit"
         android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="8dp"
@@ -29,6 +30,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/style_textedit"
         android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
         android:hint="Email"
         android:inputType="text"
         android:padding="8dp"
@@ -36,15 +38,16 @@
         android:textColorHint="#C2C2C2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginRes" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoginReg" />
 
     <EditText
-        android:id="@+id/editTextLoginRes"
+        android:id="@+id/editTextLoginReg"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/style_textedit"
         android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
         android:hint="Login"
         android:inputType="text"
         android:padding="8dp"
@@ -56,8 +59,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="129dp"
-        android:layout_height="25dp"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="Регистрация"
         android:textColor="@color/black"
@@ -75,6 +79,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/style_textedit"
         android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
         android:hint="Repeate password"
         android:inputType="textPassword"
         android:padding="8dp"
@@ -90,6 +95,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/style_btn_act"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Регистрация"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -99,11 +105,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextRepeatPwdReg" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="265dp"
-        android:layout_height="27dp"
+        android:id="@+id/btnHaveAccount"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:onClick="onClickIntentLogIn"
         android:text="У меня уже есть аккаунт"
         android:textColor="@color/black"
         android:textSize="20dp"

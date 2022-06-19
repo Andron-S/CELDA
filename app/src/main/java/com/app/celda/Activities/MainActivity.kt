@@ -1,27 +1,43 @@
 package com.app.celda.Activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.app.celda.Adapter.CourseAdapter
-import com.app.celda.Json.ImageJSONReader
-import com.app.celda.Json.ModuleJSONReader
-import com.app.celda.Model.Module
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.app.celda.R
-import com.app.celda.database.DBCelda
+import com.app.celda.databinding.MainScreenBinding
 import kotlinx.android.synthetic.main.main_screen.*
 
-class MainActivity : AppCompatActivity(), CourseAdapter.Listener {
+class MainActivity : AppCompatActivity(){
+
+
+    lateinit var binding : MainScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_screen)
-        val db = DBCelda(this)
-        db.openDB()
-        initialization()
+        binding = MainScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        replaceFragment(HomeFragment())
+
+        binding.bottomNavigationView?.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.btnHome -> replaceFragment(HomeFragment())
+                R.id.btnSearch -> replaceFragment(SearchFragment())
+                R.id.btnProfile -> replaceFragment(ProfileFragment())
+            }
+
+            return@setOnItemSelectedListener true
+        }
+
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
+    }
 
 //    override fun onRestart() {
 //        super.onRestart()
@@ -29,29 +45,6 @@ class MainActivity : AppCompatActivity(), CourseAdapter.Listener {
 //
 //        initialization()
 //    }
-
-    private fun initialization() {
-        val adapter = CourseAdapter(this)
-        rcCourses.adapter = adapter
-        rcCourses.layoutManager = LinearLayoutManager(this)
-
-        for (bitmap in ImageJSONReader().getList()) {
-            adapter.addItem(bitmap)
-            Log.i("KARTINKA: ", "$bitmap")
-        }
-
-        for (elms in ModuleJSONReader().getList()) {
-            Log.i("DANNIE: ","$elms")
-            adapter.addItem(elms)
-        }
-    }
-
-    override fun onItemClick(module : Module) {
-        val intent = Intent(baseContext, SelectedCourseScreen::class.java)
-        intent.putExtra("module", module)
-        startActivity(intent)
-//        this.finish()
-    }
 
     override fun onBackPressed() {
         moveTaskToBack(true)

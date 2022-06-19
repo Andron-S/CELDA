@@ -21,9 +21,10 @@ class LaunchScreen : AppCompatActivity() {
         }
 
         Handler().postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            // Если в аккаунт уже зайдено, то надо подавать интент на главную страницу
+            val intent = Intent(this, LogActivity::class.java)
             startActivity(intent)
-        }, 3900)
+        }, 1000) // 3900
     }
 
 }

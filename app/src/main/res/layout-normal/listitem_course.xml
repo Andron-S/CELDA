@@ -29,31 +29,35 @@
 
         <TextView
             android:id="@+id/nameCourse"
-            android:layout_width="150dp"
-            android:layout_height="55dp"
+            android:layout_width="176dp"
+            android:layout_height="70dp"
             android:layout_marginStart="18dp"
             android:layout_marginTop="23dp"
             android:fontFamily="@font/fira_sans_medium"
             android:text="Name Course"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/descriptionCourse"
-            android:layout_width="200dp"
-            android:layout_height="85dp"
+            android:id="@+id/tvProgressCourse"
+            android:layout_width="103dp"
+            android:layout_height="21dp"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="6dp"
             android:fontFamily="@font/fira_sans_light"
-            android:text="Description\ndescription description description description description description description description description description description description description description description description"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/authorCourse"
+            app:layout_constraintEnd_toStartOf="@+id/ivCourseProgressIcon"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
+            app:layout_constraintTop_toBottomOf="@+id/nameCourse"
+            app:layout_constraintVertical_bias="0.645" />
 
         <TextView
             android:id="@+id/authorCourse"
@@ -64,8 +68,20 @@
             android:fontFamily="@font/fira_sans_light"
             android:text="Author"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCourseProgressIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/authorCourse"
+            app:layout_constraintEnd_toStartOf="@+id/imgPreview"
+            app:layout_constraintTop_toBottomOf="@+id/nameCourse"
+            app:srcCompat="@drawable/done_module" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/moduleDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
@@ -34,8 +34,8 @@
             android:layout_width="320dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="13dp"
             android:fontFamily="@font/fira_sans_bold"
             android:text="TextView"
             android:textColor="@color/white"

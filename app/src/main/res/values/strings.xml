@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">CELDA</string>
     <string name="logo">CELDA</string>
+    <string name="primer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+(text) </string>
+    <string name="not_found_txt">По вашему запросу ничего не найдено</string>
+    <string name="start_search_txt">Ищите необходимые курсы на этой странице</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example_opisanie">Я - Митюшин Пётр Алексеевич, заявляю, что намеренно не скачиваю приложение “Фортинайте” для того, чтобы у меня стояла оценка 2.</string>
+    <string name="example_creator">Android для маленьких, Основы C++, С# для начинающих</string>
+    <string name="example_passed_courses">Android для маленьких, Основы C++, С# для начинающих</string>
+    <string name="example_podpiska">Какие-то пользователи</string>
 </resources>

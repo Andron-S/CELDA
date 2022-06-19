@@ -2,9 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.celda">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <queries>
+        <intent>
+            <action
+                android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
 
     <application
+        android:name=".CeldaApp"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher_foreground"
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
@@ -29,8 +40,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.RegistrationActivity" />
+        <activity android:name=".Activities.CourseScreen" />
+        <activity android:name=".Activities.LectureActivity"/>
+        <activity android:name=".Activities.LogActivity" />
+        <activity android:name=".Activities.RegActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
